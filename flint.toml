@@ -1,0 +1,3 @@
+[flint]
+version = "1"
+plugin_branch = "locust"
