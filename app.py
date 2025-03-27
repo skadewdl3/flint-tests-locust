@@ -13,3 +13,7 @@ def insert_single():
     for _ in range(5):
         time.sleep(0.2)
     return {"status": "Single insert completed"}
+
+@app.get("/health")
+def health():
+    return {"status": "OK"}

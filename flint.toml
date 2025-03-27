@@ -1,6 +1,7 @@
 [flint]
 version = 1
 plugins_branch = "locust"
+env = ".env"
 
 [tests.locust]
 script = "run.sh"
@@ -10,6 +11,13 @@ spawn_rate = 10
 run_time = "20s"
 host = "http://127.0.0.1:8000"
 output_path = "reports"
+
+[tests.locust.env]
+host = "env:MYSQL_HOST"
+port = "env:MYSQL_PORT"
+username = "env:MYSQL_USERNAME"
+password = "env:MYSQL_PASSWORD"
+database = "env:MYSQL_DATABASE"
 
 [report.json]
 output_path = "reports"
